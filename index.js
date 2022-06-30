@@ -30,7 +30,6 @@ io.on("connection", (socket) => {
 
 app.post("/uploading", (req, res) => {
   const { qr } = req.body;
-  console.log("sss");
   io.emit(`${qr}-upload`, true);
   res.send("start");
 });
